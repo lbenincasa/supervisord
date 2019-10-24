@@ -6,6 +6,7 @@ builds:
       #- darwin
     goarch:
       - amd64
+      - arm
     ldflags:
     - "-linkmode external -extldflags -static"
   -
@@ -15,6 +16,7 @@ builds:
       - darwin
     goarch:
       - amd64
+      - arm
 archive:
   format: binary
 snapshot:
