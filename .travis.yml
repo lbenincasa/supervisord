@@ -9,9 +9,7 @@ env:
 install: true
 
 after_script:
-  - go get -v github.com/alecthomas/gometalinter/...
-  - gometalinter --install
-  - gometalinter
+  - ls -l
 
 after_success:
   - test -n "$TRAVIS_TAG" && curl -sL https://git.io/goreleaser | bash
