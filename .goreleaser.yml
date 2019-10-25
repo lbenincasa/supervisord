@@ -1,5 +1,6 @@
 builds:
   -
+    id: "supervisord_static"
     binary: supervisord_static
     goos:
       - linux
@@ -10,6 +11,7 @@ builds:
     ldflags:
     - "-linkmode external -extldflags -static"
   -
+    id: "supervisord"
     binary: supervisord
     goos:
       - linux
