@@ -10,9 +10,9 @@ before:
     # - go install github.com/golang/mock/mockgen
     # - go generate ./...
 builds:
-- id: {{.ProjectName}}-darwin-amd64
+- id: supervisord-darwin-amd64
 #  ldflags: -s -w -X github.com/mailchain/mailchain.Version={{.Version}} -X github.com/mailchain/mailchain.BuildDate={{.Date}} -X github.com/mailchain/mailchain.CommitHash={{ .ShortCommit }}
-  binary: {{.ProjectName}}
+  binary: supervisord
   env:
   - CGO_ENABLED=1  
   - CC=o64-clang 
@@ -23,9 +23,9 @@ builds:
   goarch:
     - amd64
 
-- id: {{.ProjectName}}-linux-amd64
+- id: supervisord-linux-amd64
 #  ldflags: -s -w -X github.com/mailchain/mailchain.Version={{.Version}} -X github.com/mailchain/mailchain.BuildDate={{.Date}} -X github.com/mailchain/mailchain.CommitHash={{ .ShortCommit }}
-  binary: {{.ProjectName}}
+  binary: supervisord
   env:
   - CGO_ENABLED=1
   main: ./main.go
@@ -34,9 +34,9 @@ builds:
   goarch:
     - amd64    
 
-- id: {{.ProjectName}}-windows-amd64
+- id: supervisord-windows-amd64
 #  ldflags: -s -w -X github.com/mailchain/mailchain.Version={{.Version}} -X github.com/mailchain/mailchain.BuildDate={{.Date}} -X github.com/mailchain/mailchain.CommitHash={{ .ShortCommit }}
-  binary: {{.ProjectName}}
+  binary: supervisord
   env:
     - CGO_ENABLED=1
     - CC=x86_64-w64-mingw32-gcc
