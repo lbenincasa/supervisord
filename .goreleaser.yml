@@ -6,10 +6,10 @@ builds:
       - linux
 #      - darwin
     goarch:
-      - amd64
-#      - arm
-#    goarm:
-#      - 7
+#      - amd64
+      - arm
+    goarm:
+      - 7
     ldflags:
     - "-linkmode external -extldflags -static"
   -
@@ -19,10 +19,10 @@ builds:
       - linux
 #      - darwin
     goarch:
-      - amd64
-#      - arm
-#    goarm:
-#      - 7
+#      - amd64
+      - arm
+    goarm:
+      - 7
 archive:
   format: binary
 snapshot:
