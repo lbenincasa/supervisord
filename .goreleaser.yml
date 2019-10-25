@@ -4,10 +4,12 @@ builds:
     binary: supervisord_static
     goos:
       - linux
-      #- darwin
+#      - darwin
     goarch:
       - amd64
       - arm
+    goarm:
+      - 7
     ldflags:
     - "-linkmode external -extldflags -static"
   -
@@ -15,10 +17,12 @@ builds:
     binary: supervisord
     goos:
       - linux
-      - darwin
+#      - darwin
     goarch:
       - amd64
       - arm
+    goarm:
+      - 7
 archive:
   format: binary
 snapshot:
